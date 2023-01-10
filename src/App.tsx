@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import Spatial from './spatial';
+import Airpods from './airpods';
+import Runner from './runner';
+import Card from './card2';
+import Battery from './battery';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  return(
+    <div className='App'>
+      <Spatial />
+      {/* <Airpods /> */}
+      {/* <Battery /> */}
+      {/* <Runner /> */}
+      {/* <Card /> */}        
     </div>
-  );
+  )
 }
 
-export default App;
+export default  App;
