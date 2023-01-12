@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import Spatial from './spatial';
 import Airpods from './airpods';
 import Runner from './runner';
-import Card from './card2';
-import Battery from './battery';
+import Card2 from './card2';
 
 function App() {
 
@@ -13,9 +11,8 @@ function App() {
     <div className='App'>
       <Spatial />
       {/* <Airpods /> */}
-      {/* <Battery /> */}
       {/* <Runner /> */}
-      {/* <Card /> */}        
+      {/* <Card2 /> */}
     </div>
   )
 }
