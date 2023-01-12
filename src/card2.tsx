@@ -1,26 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-import { useEffect, useState } from "react"
 import './card2.css'
+import useFadeIn from "./hooks/ useFadeIn";
+import useFadeOut from "./hooks/useFadeOut";
 
-function Card() {
-  // const [count, setCount] = useState(1);
-
-  const [scrollPosition, setScrollPosition] = useState(0); //scroll 수치
-  const [scrollPositions, setScrollPositions] = useState(0); //scroll 수치
-
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop); //scroll Top의 위치를 알아내는 구문
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll); //scroll 수치 업데이트
-  }, []);
-
-  const updateScrolled = () => {
-    setScrollPositions(window.scrollY || document.documentElement.scrollTop); //scroll Top의 위치를 알아내는 구문
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", updateScrolled); //scroll 수치 업데이트
-  }, []);
+function Card2() {
+  const scrollPosition = useFadeIn();
+  const scrollPositions = useFadeOut();  
 
   return(
     <div className="Card">
@@ -46,7 +30,7 @@ function Card() {
 
 }
 
-export default Card;
+export default Card2;
 
   
   // useEffect(() => {
